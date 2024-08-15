@@ -10,6 +10,7 @@ clean_all:
 	-git branch -D merge-2
 	-git branch -D rebase-1
 	-git branch -D rebase-2
+	-git branch -D master
 
 
 # Function to rename branches
