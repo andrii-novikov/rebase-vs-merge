@@ -6,11 +6,18 @@
 all: rename_branches
 
 clean_all:
+	git checkout main
 	-git branch -D merge-1
 	-git branch -D merge-2
 	-git branch -D rebase-1
 	-git branch -D rebase-2
 	-git branch -D master
+	-git push origin -d merge-1
+	-git push origin -d merge-2
+	-git push origin -d rebase-1
+	-git push origin -d rebase-2
+	-git push origin -d master
+
 
 
 # Function to rename branches
