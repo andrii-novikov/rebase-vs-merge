@@ -9,50 +9,51 @@
 </head>
 
 <body>
-  <h1>Git: Merge vs Rebase</h1>
+  <div class="container">
+    <h1>Git: Merge vs Rebase</h1>
 
-  <h2>Merge</h2>
-  <h3>Pros:</h3>
-  <ul>
-    <li>Maintains the exact history of changes, showing a visual merge commit where branches converge.</li>
-    <li>Easier for beginners as it doesn’t alter commit history.</li>
-    <li>Useful in preserving the context of a feature branch, including all individual commits and the merging process.
-    </li>
-  </ul>
-  <h3>Cons:</h3>
-  <ul>
-    <li>Can result in a cluttered commit history (merge commits), especially in projects with lots of branches.</li>
-    <li>Sometimes harder to track down bugs due to the intertwining histories.</li>
-  </ul>
-  <p><strong>Use Case:</strong> Merge is often used in public or open-source projects where it is important to preserve
-    the exact history of how features were integrated, or in environments where auditability is crucial.</p>
+    <h2>Merge</h2>
+    <h3>Pros:</h3>
+    <ul>
+      <li>Maintains the exact history of changes, showing a visual merge commit where branches converge.</li>
+      <li>Easier for beginners as it doesn’t alter commit history.</li>
+      <li>Useful in preserving the context of a feature branch, including all individual commits and the merging
+        process.</li>
+    </ul>
+    <h3>Cons:</h3>
+    <ul>
+      <li>Can result in a cluttered commit history (merge commits), especially in projects with lots of branches.</li>
+      <li>Sometimes harder to track down bugs due to the intertwining histories.</li>
+    </ul>
+    <p><strong>Use Case:</strong> Merge is often used in public or open-source projects where it is important to
+      preserve the exact history of how features were integrated, or in environments where auditability is crucial.</p>
 
-  <h2>Rebase</h2>
-  <h3>Pros:</h3>
-  <ul>
-    <li>Creates a cleaner, linear commit history, which can be easier to read and understand when reviewing project
-      history.</li>
-    <li>Helps in avoiding redundant merge commits.</li>
-    <li>Can simplify potential bug hunting as it allows for more straightforward commit bisecting.</li>
-  </ul>
-  <h3>Cons:</h3>
-  <ul>
-    <li>Rewrites commit history, which can be dangerous for shared branches if not used carefully.</li>
-    <li>Requires a higher level of Git understanding and discipline, especially in managing conflicts and understanding
-      the implications of changing commit history.</li>
-  </ul>
-  <p><strong>Use Case:</strong> Rebase is often preferred in internal teams where maintaining a linear project history
-    is more important for the purposes of simplicity and clarity. It’s also useful for updating feature branches with
-    the latest from a main or develop branch to ensure smooth integration.</p>
+    <h2>Rebase</h2>
+    <h3>Pros:</h3>
+    <ul>
+      <li>Creates a cleaner, linear commit history, which can be easier to read and understand when reviewing project
+        history.</li>
+      <li>Helps in avoiding redundant merge commits.</li>
+      <li>Can simplify potential bug hunting as it allows for more straightforward commit bisecting.</li>
+    </ul>
+    <h3>Cons:</h3>
+    <ul>
+      <li>Rewrites commit history, which can be dangerous for shared branches if not used carefully.</li>
+      <li>Requires a higher level of Git understanding and discipline, especially in managing conflicts and
+        understanding the implications of changing commit history.</li>
+    </ul>
+    <p><strong>Use Case:</strong> Rebase is often preferred in internal teams where maintaining a linear project history
+      is more important for the purposes of simplicity and clarity. It’s also useful for updating feature branches with
+      the latest from a main or develop branch to ensure smooth integration.</p>
 
-  <h2>Best Practices</h2>
-  <ul>
-    <li>Use <strong>rebase</strong> for pulling the latest changes from the main branch into your feature branch to keep
-      it up-to-date.</li>
-    <li>Use <strong>merge</strong> when you need to integrate completed features into the main branch to preserve the
-      context of the feature development.</li>
-  </ul>
-
+    <h2>Best Practices</h2>
+    <ul>
+      <li>Use <strong>rebase</strong> for pulling the latest changes from the main branch into your feature branch to
+        keep it up-to-date.</li>
+      <li>Use <strong>merge</strong> when you need to integrate completed features into the main branch to preserve the
+        context of the feature development.</li>
+    </ul>
+  </div>
 </body>
 
 </html>
