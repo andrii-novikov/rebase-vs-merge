@@ -9,15 +9,18 @@ clean_all:
 	git checkout main
 	-git branch -D merge-1
 	-git branch -D merge-2
+	-git branch -D merge-3
 	-git branch -D rebase-1
 	-git branch -D rebase-2
+	-git branch -D rebase-3
 	-git branch -D master
 	-git push origin -d merge-1
 	-git push origin -d merge-2
+	-git push origin -d merge-3
 	-git push origin -d rebase-1
 	-git push origin -d rebase-2
+	-git push origin -d rebase-3
 	-git push origin -d master
-
 
 
 # Function to rename branches
@@ -34,6 +37,7 @@ rename_branches:
 	# Creating new branches from b-1 and b-2
 	git branch --copy b-1 $(branch_name)-1
 	git branch --copy b-2 $(branch_name)-2
+	git branch --copy b-3 $(branch_name)-3
 
 prepare_merge:
 	make branch_name=merge
